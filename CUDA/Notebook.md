@@ -88,6 +88,14 @@ Edge computing: de-centralized computing.
 
 - [**Huggingface**](https://huggingface.co/)
 
+## Chapter 02 - CUDA Setup
+
+WSL -> python3 -> cuda toolkit and nvidia driver (follow the [Nvidia instructions](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)).
+
+For WSL, only install driver on Windows. Use `nvidia-smi` to check if driver is installed successfully. `CUDA version` is the maximum supported CUDA version.
+
+Use `nvcc --version` to check if CUDA toolkit is installed successfully. This version should be less than or equal to the `CUDA version` shown in `nvidia-smi`.
+
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
 [github]: https://img.shields.io/badge/-dotfiles-white?style=flat&logo=github&logoColor=181717
