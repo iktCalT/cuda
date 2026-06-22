@@ -96,6 +96,60 @@ For WSL, only install driver on Windows. Use `nvidia-smi` to check if driver is 
 
 Use `nvcc --version` to check if CUDA toolkit is installed successfully. This version should be less than or equal to the `CUDA version` shown in `nvidia-smi`.
 
+## Chapter 03 - C/C++ Review
+
+My C++ repository: [![C++ repo][github]](https://github.com/iktCalT/cpp-learning-journey)
+
+For a large tensor, `int` is not enough to iterate through it. Use `size_t` (the maximum size of a theoretically possible object of any type. On my PC, it's `unsigned long long`) instead.
+
+### Makefile & CMakeLists
+
+cmake combined with `CMakeLists.txt` can be used to generate Makefile automatically.
+
+For example:
+
+```makefile
+# Copied from https://github.com/Infatoshi/cuda-course/blob/master/03_C_and_C%2B%2B_Review/06%20Makefiles/Makefile
+
+# Note: 01.c, 02.c, 03.cu are 3 files in the same directory with this Makefile
+
+.PHONY: 01 01_obj 01_obj_exe_run 02 03 clean
+
+GCC = gcc
+NVCC = nvcc
+CUDA_FLAGS = -arch=sm_86
+
+01:
+  @$(GCC) -o 01 01.c
+
+
+# just compiles to object file
+01_obj:
+  @$(GCC) -c 01.c -o 01.o
+
+# compiles and runs the object file (ensure 01_obj is up to 
+# date by running 01_obj first if it hasn't been run yet)
+01_obj_exe_run: 01_obj
+  @$(GCC) 01.o -o 01
+  @./01
+
+02:
+  @$(GCC) -o 02 02.c
+
+03: 
+  @$(NVCC) $(CUDA_FLAGS) -o 03_cu 03.cu
+
+clean: 
+  rm -f 01 02 03_cu *.o
+```
+
+- **`.PHONY`**: Phony targets are useful for avoiding conflicts with files of the same name and improving performance.
+- **Difference between `=` and `:=`**: `a = b` is more like `int& a = b` in C++, and `a := b` is like `int a = b` in C++. `=` doesn't create any copy, both variables are stored at the same place. While `:=` creates a copy.
+
+### Debugger
+
+Read [Missing Semester Lecture 4](https://missing.csail.mit.edu/2026/debugging-profiling/) or [CSAPP](https://csapp.cs.cmu.edu/3e/students.html) to learn gdb.
+
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
-[github]: https://img.shields.io/badge/-dotfiles-white?style=flat&logo=github&logoColor=181717
+[github]: https://img.shields.io/badge/-Github-white?style=flat&logo=github&logoColor=181717
