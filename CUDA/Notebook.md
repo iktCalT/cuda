@@ -150,6 +150,47 @@ clean:
 
 Read [Missing Semester Lecture 4](https://missing.csail.mit.edu/2026/debugging-profiling/) or [CSAPP](https://csapp.cs.cmu.edu/3e/students.html) to learn gdb.
 
+## Chapter 04 - Intro to GPUs
+
+Although GPU's clock speed is slower than CPU's, it    calculates faster because usually, GPUs have much more cores than CPUs.
+
+TPUs are specialized GPUs for deep learning algorithms. "T": tensor.
+
+FPGA: chips can be programmed. Be used for specific tasks. Very expensive.
+
+### What makes GPUs so fast for deep learning
+
+[![What makes GPUs so fast][github]](https://github.com/Infatoshi/cuda-course/tree/master/04_Gentle_Intro_to_GPUs#what-makes-gpus-so-fast-for-deep-learning)
+
+### Terms
+
+- CPU (host)
+- GPU (device)
+
+In a typical CUDA program (following is copied from [course note](https://github.com/Infatoshi/cuda-course/tree/master/04_Gentle_Intro_to_GPUs#what-makes-gpus-so-fast-for-deep-learning)):
+
+- CPU allocates CPU memory
+- CPU copies data to GPU
+- CPU launches kernel on GPU (processing is done here)
+- CPU copies results from GPU back to CPU to do something useful with it
+
+GPU kernels are GPU's version of CPU functions. They are functions with `__global__` in CUDA.
+
+```c++
+__global__ void vecAdd(const float* A, const float* B, float* C, int N) {
+  int idx = threadIdx.x + blockIdx.x * blockDim.x;
+  if (idx < N) {
+  C[idx] = A[idx] + B[idx];
+}
+}
+```
+
+#### Other terms
+
+![terms to remember](static/terms_to_remember.png)
+
+GEMMs are multiplications like `C = αAB + βC`.
+
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
 [github]: https://img.shields.io/badge/-Github-white?style=flat&logo=github&logoColor=181717
