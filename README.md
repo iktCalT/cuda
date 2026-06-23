@@ -2,6 +2,10 @@
 
 This is my CUDA learning journey.
 
+## Documents
+
+[CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-programming-guide/index.html)
+
 ## Courses
 
 I am going to learn the following courses:

@@ -1,4 +1,6 @@
-# CUDA Programming Course – High-Performance Computing with GPUs - by Elliot Arledge
+# CUDA Programming Course – High-Performance Computing with GPUs
+
+This course is provided by Elliot Arledge.
 
 [Course Link](https://youtu.be/86FAWCzIe_4)
 [Github - CUDA course](https://github.com/Infatoshi/cuda-course)
@@ -160,6 +162,8 @@ FPGA: chips can be programmed. Be used for specific tasks. Very expensive.
 
 ### What makes GPUs so fast for deep learning
 
+[![The Benefits of Using GPUs][nv]](https://docs.nvidia.com/cuda/cuda-programming-guide/01-introduction/introduction.html#the-benefits-of-using-gpus)
+
 [![What makes GPUs so fast][github]](https://github.com/Infatoshi/cuda-course/tree/master/04_Gentle_Intro_to_GPUs#what-makes-gpus-so-fast-for-deep-learning)
 
 ### Terms
@@ -191,6 +195,11 @@ __global__ void vecAdd(const float* A, const float* B, float* C, int N) {
 
 GEMMs are multiplications like `C = αAB + βC`.
 
+## Chapter 05 - Writing your First Kernels
+
+
+
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
 [github]: https://img.shields.io/badge/-Github-white?style=flat&logo=github&logoColor=181717
+[nv]: https://img.shields.io/badge/-Nvidia-white?style=flat&logo=nvidia&logoColor=76B900
