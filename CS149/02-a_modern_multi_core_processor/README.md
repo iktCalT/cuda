@@ -178,7 +178,7 @@ For example, when you meet cache miss and is waiting for data fetching from main
 
 [*To be continue...]
 
-Now, we can finish assignment 1.
+Now, we can finish [assignment 1](https://github.com/stanford-cs149/asst1).
 
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
