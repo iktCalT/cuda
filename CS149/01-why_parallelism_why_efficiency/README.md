@@ -1,7 +1,7 @@
 # Lecture 1 - Why Parallelism? Why Efficiency?
 
 A parallel computer is a collection of processing elements that cooperate to solve problems quickly.
-![parallel computer](../static/01_parallel-computer.png)
+![parallel computer](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_003.jpg)
 
 ## Demos
 
@@ -17,9 +17,9 @@ Demo3: massive parallel execution. Stanford students are so creative. [![demo 3]
 
 ## Course themes
 
-![course theme 1](../static/01_course-theme-1.jpg)
-![course theme 2](../static/01_course-theme-2.jpg)
-![course theme 3](../static/01_course-theme-3.jpg)
+![course theme 1](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_011.jpg)
+![course theme 2](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_012.jpg)
+![course theme 3](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_013.jpg)
 
 ## Course arrangement
 
@@ -43,7 +43,7 @@ Execute instructions.
 
 After some operations, resulting the changes in state (the value of a register or a value in memory).
 
-![processor](../static/01_processor.jpg)
+![processor](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_031.jpg)
 
 ### Putting them together
 
@@ -53,33 +53,35 @@ After some operations, resulting the changes in state (the value of a register o
 
 *A state means the values of a program data, which are stored in memory or processor's register.*
 
+But, if we take a close look at those instructions, we will notice that some instructions are not dependent. So ...
+
 ### If we have multiple processors
 
 If we have 2 processors, we can turn a 5 clock cycle program into 3 clock cycle. Because instruction 1, 2, 3 are independent.
 
-![two processors](../static/01_two-processors.jpg)
+![two processors](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_041.jpg)
 
 But we cannot improve the performance if we have 3 processors.
 
-![three processors](../static/01_three-processors.jpg)
+![three processors](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_044.jpg)
 
 Because of their dependency. Instruction 4 and 5 are dependent to each other.
 
-![dependency](../static/01_dependency.jpg)
+![dependency](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_045.jpg)
 
 ### Idea 1 - Superscalar
 
 So we get our idea 1: there are some hardware (e.g. Intel Pentium CPU) can automatically find independent instructions and execute multiple independent instructions in one clock cycle. It is finished automatically by processor. Programmers don't need to explicitly write parallel program (and don't even feel it). [![idea 1][yt]](https://youtu.be/V1tINV2-9p4?t=3259)
 
-![idea 1](../static/01_idea-1.jpg)
+![idea 1](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_046.jpg)
 
 Scientists found that for most ILP (instruction level parallelism), once you can speed it up around 3 times, it will be hard to increase. Even though you increase your CPU's superscalar. Because they don't have more parallelism to be used, just like the 3 processor case above. [![limits of superscalar][yt]](https://youtu.be/V1tINV2-9p4?t=3340)
 
-![recent years](../static/01_recent-years.jpg)
+![recent years](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_052.jpg)
 
 In recent years, due to the "power wall", processors' frequency is no longer growing as fast as before. **So, in recent years, the only way to increase performance is increasing programs' parallelism.**
 
-![why parallelism](../static/01_why-parallelism.jpg)
+![why parallelism](https://gfxcourses.stanford.edu/cs149/fall23content/media/whyparallelism/images/slide_055.jpg)
 
 ## What you will learn in this class
 
@@ -97,13 +99,13 @@ You will find out that if you write your C++ (not Python or Lua) code properly, 
 
 ### What is memory?
 
-DRAMs and caches (SRAMs) are implementations of memory.
+DRAMs and caches (L1, L2, L3 caches are usually SRAMs) are implementations of memory.
 
 In a programmer's perspective, memory is a sequence of values. And values have two places to be stored in — registers or memory.
 
 DRAMs are slow, and caches are fast
 
-[*Class finishes]
+[*To be continue...]
 
 For more information, read CSAPP Chapter 6: The Memory Hierarchy.
 
