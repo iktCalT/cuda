@@ -2,9 +2,9 @@
 
 This course is provided by Professor Kayvon Fatahalian and Professor Kunle Olukotun.
 
-[Website](https://gfxcourses.stanford.edu/cs149/fall23/)
-
-[Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rMp7MTFr4hQsDEcX7Bx6Odp)
+[Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rMp7MTFr4hQsDEcX7Bx6Odp)  
+[Course Website](https://gfxcourses.stanford.edu/cs149/fall23/)
+> **Please note that all slides on my notebook are linked to the images of this website. And I will not upload copies of slides in case this repo goes too large. If those links fail someday, unfortunately, I can do nothing to help.**
 
 ## Lecture links
 
