@@ -43,3 +43,9 @@ This course is provided by Professor Kayvon Fatahalian and Professor Kunle Oluko
 - [Written Assignment 3](https://gfxcourses.stanford.edu/cs149/fall23content/static/pdfs/written_asst3.pdf)
 - [Written Assignment 4](https://gfxcourses.stanford.edu/cs149/fall23content/static/pdfs/written_asst4.pdf)
 - [Written Assignment 5](https://gfxcourses.stanford.edu/cs149/fall23content/static/pdfs/written_asst5.pdf)
+
+## My notebooks
+
+- [Lecture 1](./01-whyparallelism/README.md)
+- [Lecture 2](./02-multicore/README.md)
+- [Lecture 3](./03-multicore2_ispc/README.md)
