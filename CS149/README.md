@@ -49,3 +49,14 @@ This course is provided by Professor Kayvon Fatahalian and Professor Kunle Oluko
 - [Lecture 1](./01-whyparallelism/README.md)
 - [Lecture 2](./02-multicore/README.md)
 - [Lecture 3](./03-multicore2_ispc/README.md)
+- [Lecture 4](./04-progbasics/README.md)
+
+## My solutions
+
+*Private repositories, only visible to myself.
+
+- [Assignment 1](https://github.com/iktCalT/cs149-asst1)
+- [Assignment 2](https://github.com/iktCalT/cs149-asst2)
+- [Assignment 3](https://github.com/iktCalT/cs149-asst3)
+- [Assignment 4](https://github.com/iktCalT/cs149-asst4)
+- [Assignment 5](https://github.com/iktCalT/cs149-asst5)
