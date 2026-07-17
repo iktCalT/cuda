@@ -196,7 +196,7 @@ Why we need 3 barriers in the example?
 - The third one: for example, if we don't have second barrier. When thread 3 has finished comparison (`if (diff/(n*n) < TOLERANCE)`), and it goes into next loop, then it set `diff = 0.f`. But now, thread 2 have not started comparison yet. Then, when thread 2 start comparing, it find that `diff/(n*n)` is 0 (`< TOLERANCE`), and thread 2 quits in the next loop.
 - The first barrier: if we don't have it. When thread 3 has already modified `diff` by `diff += myDiff`. After that, thread 2 set `diff = 0.f`, then `diff` is not correct.
 
-\[Challenge\] [![challenge][yt]](https://youtu.be/0-ztm8SKq70?t=4564) Can you use only one barrier? Don't use the same copy of `diff` for every iteration.  -> Answer: [Lecture 5](../05-perfopt1/README.md).
+\[Challenge\] [![challenge][yt]](https://youtu.be/0-ztm8SKq70?t=4564) Can you use only one barrier? Don't use the same copy of `diff` for every iteration.  -> Answer: [Lecture 5](../05-perfopt1/README.md/#review).
 
 ### Summary of this example
 
