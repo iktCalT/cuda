@@ -51,6 +51,7 @@ This course is provided by Professor Kayvon Fatahalian and Professor Kunle Oluko
 - [Lecture 3](./03-multicore2_ispc/README.md)
 - [Lecture 4](./04-progbasics/README.md)
 - [Lecture 5](./05-perfopt1/README.md)
+- [Lecture 6](./06-perfopt2/README.md)
 
 ## My solutions
 
