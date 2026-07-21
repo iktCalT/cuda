@@ -170,9 +170,21 @@ Right side is facing compute bound: your CPU is 100% used. Even if you ask it to
 >
 > In any case, you can use better algorithm to make it possible to get same result with fewer calculations. But arithmetic intensity may be greater or lesser, depends on your algorithm. It means that in this graph, FLOPS (y axis) may increase or decrease. However, since your algorithm make it possible to finish more work with same FLOPS, you may observe better performance in the end! So, keep in mind that **efficiency is important**!
 
+### How to know which part is bottleneck
+
+Computation, memory bandwidth, locality, synchronization... all these factors can be bottleneck of you program, you can do the following steps to determine which one is affects most.
+![get higher performance tips](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_058.jpg)
+
+Profilers are also helpful.
+![profilers](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_059.jpg)
+
 ## QA
 
 - Two questions about why we use message passing and one question about performance: [![QA][yt]](https://youtu.be/Mhdny2JNhmc?t=2361)
+
+## Bonus slides
+
+Read slides 60 to 69 on [course website](https://gfxcourses.stanford.edu/cs149/fall23/lecture/perfopt2/).
 
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
