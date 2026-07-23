@@ -158,15 +158,33 @@ So, we need to avoid too many requests to a resource at the same time (that's wh
 Always try simple things first:
 ![tip 1](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_054.jpg)
 
-How to know if I meet bandwidth bound (you should watch the video [![tip 2][yt]](https://youtu.be/Mhdny2JNhmc?t=4113)):
+How to know if I meet bandwidth bound (watch the video [![tip 2][yt]](https://youtu.be/Mhdny2JNhmc?t=4113)):
 ![tip 2 p1](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_055.jpg)
+
+Left side is facing bandwidth bound: when you increase arithmetic intensity (operational intensity), you are asking CPU to do more calculation with same memory request. So, your program can run faster.  
+Right side is facing compute bound: your CPU is 100% used. Even if you ask it to do more work with same amount of memory request, it cannot perform better.
 ![tip 2 p2](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_056.jpg)
 > [!Tip]
-> You can read second image from right to left (right: less memory request; left: more memory request).
+> When you are on the left side (rising part) of this graph, you are facing **bandwidth bound**, and you can use techniques like "fusing" loops to increase arithmetic intensity (same throughput, but more computation) and get better performance.  
+> However, when you are on the right side (platform) of this graph, you are facing compute limit (your CPU cannot compute faster). Then increasing arithmetic intensity cannot help.
+>
+> In any case, you can use better algorithm to make it possible to get same result with fewer calculations. But arithmetic intensity may be greater or lesser, depends on your algorithm. It means that in this graph, FLOPS (y axis) may increase or decrease. However, since your algorithm make it possible to finish more work with same FLOPS, you may observe better performance in the end! So, keep in mind that **efficiency is important**!
+
+### How to know which part is bottleneck
+
+Computation, memory bandwidth, locality, synchronization... all these factors can be bottleneck of you program, you can do the following steps to determine which one is affects most.
+![get higher performance tips](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_058.jpg)
+
+Profilers are also helpful.
+![profilers](https://gfxcourses.stanford.edu/cs149/fall23content/media/perfopt2/images/slide_059.jpg)
 
 ## QA
 
 - Two questions about why we use message passing and one question about performance: [![QA][yt]](https://youtu.be/Mhdny2JNhmc?t=2361)
+
+## Bonus slides
+
+Read slides 60 to 69 on [course website](https://gfxcourses.stanford.edu/cs149/fall23/lecture/perfopt2/).
 
 <!----------- References ----------->
 [yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
