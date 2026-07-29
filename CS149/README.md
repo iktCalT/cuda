@@ -52,6 +52,8 @@ This course is provided by Professor Kayvon Fatahalian and Professor Kunle Oluko
 - [Lecture 4](./04-progbasics/README.md)
 - [Lecture 5](./05-perfopt1/README.md)
 - [Lecture 6](./06-perfopt2/README.md)
+- [Lecture 7](./07-gpucuda/README.md)
+- [Lecture 8](./08-dataparallel/README.md)
 
 ## My solutions
 
