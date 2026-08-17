@@ -212,6 +212,4 @@ Narrow dependency and wide dependency
 We talked about MapReduce and Spark. MapReduce is fault-tolerant but slow, because it stores data on disks. Spark is both fault-tolerant and fast. Because it stores data on memory, but also has some mechanisms to ensure fault tolerance.
 
 We are running out of time. Next lecture will continue.
-
-<!----------- References ----------->
-[yt]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat-square&logo=YouTube&logoColor=white
+>[!Note] due to some reasons, next lecture is lecture 11 rather than lecture 10.
